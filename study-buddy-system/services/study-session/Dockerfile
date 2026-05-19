@@ -13,7 +13,7 @@ RUN npm install
 # Copy rest of project
 COPY . .
 
-RUN npx prisma generate
+RUN DATABASE_URL="postgresql://dummy:dummy@localhost:5432/dummy" npx prisma generate
 
 ENV PORT=4002
 
